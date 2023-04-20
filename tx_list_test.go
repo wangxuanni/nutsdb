@@ -844,4 +844,7 @@ func TestTx_GetListTTL(t *testing.T) {
 
 	tx.Commit()
 
+	ttl, err = tx.GetListTTL(bucket, key)
+	assertions.Error(err, "TestTx_GetListTTL checkTxIsClosed fail")
+
 }
